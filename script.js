@@ -1,4 +1,6 @@
 const parallax = document.getElementById("parallax");
+const parallax2 = document.getElementById("parallax2");
+
 const concepting = document.getElementById("concepting");
 const visual = document.getElementById("visual");
 const tech = document.getElementById("tech");
@@ -6,6 +8,7 @@ const tech = document.getElementById("tech");
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
   parallax.style.backgroundPositionY = offset * 0.4 + "px";
+  parallax2.style.backgroundPositionY = offset * 0.4 + "px";
   // DIV 1 background will move slower than other elements on scroll.
 });
 
