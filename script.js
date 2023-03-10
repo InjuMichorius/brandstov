@@ -1,9 +1,13 @@
 const parallax = document.getElementById("parallax");
 const parallax2 = document.getElementById("parallax2");
 
-const concepting = document.getElementById("concepting");
-const visual = document.getElementById("visual");
-const tech = document.getElementById("tech");
+const concepting = document.getElementById("blueprinting");
+const visual = document.getElementById("pixelMagic");
+const tech = document.getElementById("codecraft");
+
+const conceptingText = document.getElementById("concepting");
+const visualText = document.getElementById("visual");
+const techText = document.getElementById("tech");
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
@@ -14,18 +18,33 @@ window.addEventListener("scroll", function () {
 
 function display(expertise) {
     if(expertise == 'concepting') {
-        concepting.style.display = 'block';
-        visual.style.display = 'none';
-        tech.style.display = 'none';
+        conceptingText.style.display = 'block';
+        visualText.style.display = 'none';
+        techText.style.display = 'none';
+        concepting.classList.add('selected')
+        visual.classList.remove('selected')
+        tech.classList.remove('selected')
     } else if(expertise == 'visual') {
-        concepting.style.display = 'none';
-        visual.style.display = 'block';
-        tech.style.display = 'none';
+        conceptingText.style.display = 'none';
+        visualText.style.display = 'block';
+        techText.style.display = 'none';
+        concepting.classList.remove('selected')
+        visual.classList.add('selected')
+        tech.classList.remove('selected')
     } else {
-        concepting.style.display = 'none';
-        visual.style.display = 'none';
-        tech.style.display = 'block';
+        conceptingText.style.display = 'none';
+        visualText.style.display = 'none';
+        techText.style.display = 'block';
+        concepting.classList.remove('selected')
+        visual.classList.remove('selected')
+        tech.classList.add('selected')
     }
+}
+
+// Met een loop steeds plus één erbij tellen. wanneer er niks meer is om overheen te itereren donkere overlay met socials
+function hover(img)
+{
+ img.src = "./images/person2.jpg"
 }
 
 console.log('What are you doing in my swamp?')

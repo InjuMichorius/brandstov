@@ -24,29 +24,34 @@
             <div class="labels">
                 <h3>Our <i>recipe</i></h3>
                 <ul>
-                    <li onclick="display('concepting')"><span class="hover-underline-animation">Concepting</span></li>
-                    <li onclick="display('visual')"><span class="hover-underline-animation">Visual</span></li>
-                    <li onclick="display('tech')"><span class="hover-underline-animation">Tech</span></li>
+                    <li onclick="display('concepting')"><span id="blueprinting" class="hover-underline-animation">Blueprinting</span></li>
+                    <li onclick="display('visual')"><span id="pixelMagic" class="hover-underline-animation">Pixel Magic</span></li>
+                    <li onclick="display('tech')"><span id="codecraft" class="hover-underline-animation">Codecraft</span></li>
                 </ul>
             </div>
             <div class="values">
                 <p id="concepting">Concepting is basically brainstorming on steroids. It's when we let our imaginations
-                    run wild and
-                    come up with all sorts of wacky and wonderful ideas to bring our design vision to life. Whether it's
-                    scribbling on a napkin, sketching on a whiteboard, or even doodling on a tablet, this is the stage
-                    where we get to let our creativity flow freely and explore all the possibilities.</p>
-                <p id="visual">Visual.</p>
-                <p id="tech">Tech.</p>
-                <!-- <p>A picture, piece of film, or display used to illustrate or accompany something.</p>
-                <p>abbreviation for technical or technological: used to describe a company, system, area of work, etc.
-                    that does or makes something involving technology: tech industry/sector/economy.</p> -->
+                    run wild and come up with all sorts of wacky and wonderful ideas to bring our design vision to life.
+                    -> Joppe is our vision architect.</p>
+                <p id="visual">This is where we take our vision and turn it into a reality. We get to flex our creative
+                    muscles and bring our ideas to life using all sorts of design tools and techniques. Whether it's
+                    sketching, wireframing, or prototyping, designing allows us to experiment and refine our ideas until
+                    we arrive at the perfect solution.
+
+                    -> David is our mierenneuker.</p>
+                <p id="tech">Coding and development is where we take our design files and turn them into a website, app,
+                    or product that users can interact with. It's where we turn our static designs into dynamic and
+                    interactive experiences that users will love. We start coding and developing our way to digital
+                    greatness!
+
+                    -> Inju is our code wizard.</p>
             </div>
         </section>
         <section class="team-block">
             <h3>The <i>dreamteam</i></h3>
             <div class="image-container">
                 <div class="image-wrapper">
-                    <img src="./images/person1.jpg" alt="">
+                    <img src="./images/person1.jpg" alt="" onmouseover="hover(this);">
                     <p>David van Rumpt</p>
                 </div>
                 <div class="image-wrapper">
@@ -54,7 +59,7 @@
                     <p>Inju Michorius</p>
                 </div>
                 <div class="image-wrapper">
-                    <img src="./images/person3.jpg" alt="">
+                    <img src="./images/person3.jpg" alt="" onmouseover="hover(this);">
                     <p>Joppe Pelgrim</p>
                 </div>
             </div>
