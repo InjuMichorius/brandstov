@@ -34,7 +34,7 @@ header {
 }
 
 header .container {
-    padding: 0 130px 100px;
+    padding: 0 130px 120px;
 }
 
 #parallax2 {
@@ -48,7 +48,7 @@ header .container {
 header h1 {
     color: white;
     font-family: Inter;
-    font-size: 210px;
+    font-size: 9vw;
     font-weight: 500;
     line-height: 260px;
     text-transform: uppercase;
@@ -69,11 +69,13 @@ header p span {
 }
 
 main {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 180px 130px 100px;
     color: white;
     background-color: #000;
+    z-index: 1;
 }
 
 .expertise-block {
@@ -99,7 +101,7 @@ main {
 
 .expertise-block ul li, .expertise-block ul div {
     font-family: Inter;
-    font-size: 96px;
+    font-size: 76px;
     font-weight: 400;
     line-height: 116px;
     text-transform: uppercase;
@@ -207,6 +209,7 @@ main {
 
 footer {
     height: 50vh;
+    pointer-events: none;
 }
 
 .footer-container {
@@ -223,6 +226,7 @@ footer {
     gap: 30px;
     justify-content: space-between;
     padding: 180px 270px 0;
+    pointer-events: auto;
 }
 
 .menu-items-container > p:first-child {
@@ -284,21 +288,35 @@ footer {
 }
 
 /* TABLET DESIGN */
-@media only screen and (min-width:600px) and (max-width:1200px) {
+@media only screen and (min-width:600px) and (max-width:1400px) {
+    header h1 {
+        font-size: 120px;
+        line-height: 144px;
+    }
+    header .container {
+        padding: 0 60px 180px;
+    }
+    .expertise-block ul li, .expertise-block ul div {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    main {
+        padding: 180px 30px 100px;
+    }
     .footer-container {
         padding: 0 60px;
     }
 }
 
 /* MOBILE DESIGN */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     header .container {
         padding: 0 20px 160px;
     }
     
     header h1 {
         font-size: 40px;
-        line-height: 40px;
+        line-height: 48px;
     }
     
     header p {
@@ -342,10 +360,11 @@ footer {
     }
     .expertise-block ul li, .expertise-block ul div {
         font-size: 36px;
-        line-height: 40px;
+        line-height: 43px;
     }
     .values {
         padding-top: 30px;
+        width: 100%;
     }
     .articles-container {
         flex-direction: column;
