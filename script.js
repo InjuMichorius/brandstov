@@ -8,6 +8,13 @@ const tech = document.getElementById("codecraft");
 const conceptingText = document.getElementById("concepting");
 const visualText = document.getElementById("visual");
 const techText = document.getElementById("tech");
+
+function defaultDisplay() {
+    conceptingText.style.display = 'block';
+    concepting.classList.add('selected')
+}
+defaultDisplay()
+
 // Parallax Effect for DIV 1
 window.addEventListener("scroll", function () {
   let offset = window.pageYOffset;
@@ -44,7 +51,7 @@ function display(expertise) {
 // Met een loop steeds plus één erbij tellen. wanneer er niks meer is om overheen te itereren donkere overlay met socials
 function hover(img)
 {
- img.src = "./images/person2.jpg"
+//  img.src = "./images/person2.jpg"
 }
 
 console.log('What are you doing in my swamp?')

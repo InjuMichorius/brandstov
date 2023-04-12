@@ -3,6 +3,11 @@
     src: url('./fonts/Inter.ttf');
 }
 
+@font-face {
+    font-family: 'Inter Italic';
+    src: url('./fonts/static/Inter-Italic.otf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -23,6 +28,7 @@ header {
     font-family: Montserrat, sans-serif;
     width: 100%;
     min-height: 100vh;
+    background-color: black;
     background: url("./images/banner-background.jpg");
     background-size: cover;
 }
@@ -65,7 +71,7 @@ header p span {
 main {
     width: 100%;
     min-height: 100vh;
-    padding: 180px 130px 0;
+    padding: 180px 130px 100px;
     color: white;
     background-color: #000;
 }
@@ -91,7 +97,7 @@ main {
     flex-direction: column;
 }
 
-.expertise-block ul li {
+.expertise-block ul li, .expertise-block ul div {
     font-family: Inter;
     font-size: 96px;
     font-weight: 400;
@@ -123,6 +129,7 @@ main {
 
 .team-block .image-container {
     display: flex;
+    justify-content: center;
 }
 
 .team-block .image-container .image-wrapper {
@@ -130,8 +137,8 @@ main {
     width: 33%;
 }
 
-.image-wrapper {
-    width: 100%;
+.image-wrapper img {
+    width: 400px;
 }
 
 .team-block .image-container .image-wrapper p {
@@ -210,12 +217,12 @@ footer {
     z-index: -1;
     width: 100%;
     height: 51vh;
-    background-color: #5A2AF8;
+    background-color: #13191a;
     color: white;
     display: flex;
-    gap: 350px;
-    justify-content: center;
-    padding-top: 180px;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 180px 270px 0;
 }
 
 .menu-items-container > p:first-child {
@@ -264,7 +271,7 @@ footer {
 }
 
 .selected {
-    font-style: italic;
+    font-family: Inter Italic;
 }
 
 .selected::after {
@@ -274,6 +281,13 @@ footer {
     height: 4px;
     transform: scaleX(1);
     background-color: white;
+}
+
+/* TABLET DESIGN */
+@media only screen and (min-width:600px) and (max-width:1200px) {
+    .footer-container {
+        padding: 0 60px;
+    }
 }
 
 /* MOBILE DESIGN */
@@ -298,9 +312,23 @@ footer {
     main {
         width: 100%;
         min-height: 100vh;
-        padding: 60px 15px 0;
+        padding: 60px 15px;
         color: white;
         background-color: #000;
+    }
+    .team-block .image-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .team-block .image-container .image-wrapper {
+        width: 100%;
+    }
+    .image-wrapper img {
+        width: 300px;
+    }
+    .expertise-block h3, .team-block h3, .articles-block h3 {
+        font-size: 26px;
+        margin-bottom: 15px;
     }
     .articles-container {
         flex-direction: column;
@@ -315,3 +343,27 @@ footer {
         padding: 0 15px;
     }
 }
+
+.rainbow:hover {
+    cursor: crosshair;
+    -webkit-animation: rainbow 1s infinite;
+    animation: rainbow 1s infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%, 100% { color: #7ccdea; }
+    16%      { color: #1a1a1b; }
+    32%      { color: #2ecc40; }
+    48%      { color: #ffdc00; }
+    64%      { color: #b10dc9; }
+    80%      { color: #ff4136; }
+  }
+
+@keyframes rainbow {
+    0%, 100% { color: #7ccdea; }
+    16%      { color: #0074d9; }
+    32%      { color: #2ecc40; }
+    48%      { color: #ffdc00; }
+    64%      { color: #b10dc9; }
+    80%      { color: #ff4136; }
+  }
