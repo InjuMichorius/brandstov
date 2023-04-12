@@ -316,19 +316,36 @@ footer {
         color: white;
         background-color: #000;
     }
+    .team-block {
+        padding-top: 90px;
+    }
     .team-block .image-container {
         flex-direction: column;
         gap: 20px;
     }
     .team-block .image-container .image-wrapper {
         width: 100%;
+        justify-content: center;
     }
     .image-wrapper img {
-        width: 300px;
+        width: 90%;
     }
     .expertise-block h3, .team-block h3, .articles-block h3 {
         font-size: 26px;
         margin-bottom: 15px;
+    }
+    .expertise-block {
+        display: block;
+    }
+    .expertise-block ul {
+        gap: 30px;
+    }
+    .expertise-block ul li, .expertise-block ul div {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .values {
+        padding-top: 30px;
     }
     .articles-container {
         flex-direction: column;
@@ -340,7 +357,12 @@ footer {
     .footer-container {
         flex-direction: column;
         gap: 20px;
-        padding: 0 15px;
+        padding: 60px 15px;
+        height: 500px;
+        justify-content: start;
+    }
+    footer {
+        height: 500px;
     }
 }
 
